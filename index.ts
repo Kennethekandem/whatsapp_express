@@ -1,11 +1,11 @@
 'use strict';
 
-const express = require('express');
+let express = require('express');
 const app = express();
 
 require('dotenv').config();
 require('./connectors/mongodb');
-const route : any = require('./routes');
+let route : any = require('./routes');
 
 app.use('/', route);
 

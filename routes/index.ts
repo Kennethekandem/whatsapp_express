@@ -1,5 +1,5 @@
 const routes : any = require('express').Router();
-const auth = require('./auth');
+let auth = require('./auth');
 
 routes.all('/', (req : any, res : any) => {
 
