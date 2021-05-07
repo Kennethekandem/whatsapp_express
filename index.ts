@@ -1,10 +1,13 @@
+'use strict';
+
 const express = require('express');
 const app = express();
 
 require('dotenv').config();
-const routes = require('./routes');
+require('./connectors/mongodb');
+const route : any = require('./routes');
 
-app.use('/', routes);
+app.use('/', route);
 
 const port = process.env.PORT;
 app.listen(port);

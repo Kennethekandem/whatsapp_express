@@ -1,7 +1,7 @@
-const routes = require('express').Router();
+const routes : any = require('express').Router();
 const auth = require('./auth');
 
-routes.all('/', (req, res) => {
+routes.all('/', (req : any, res : any) => {
 
     res.status(200).json({
         status: true,
