@@ -14,6 +14,15 @@ class userService {
         if(check) {
             throw authServiceCreateError.Conflict('User with this phone number already exist');
         }
+
+        data.password = bcrypt.hashSync(data.password, 8);
+
+        let newUser = new userModel(data);
+        let user = await newUser.save();
+        delete data.password;
+
+        data.accessToken = await jwt.signAccessToken(user);
+
     }
 }
 
