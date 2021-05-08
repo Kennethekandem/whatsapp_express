@@ -1,16 +1,15 @@
-let cloudinary = require('cloudinary');
-
+const cloudinary = require("cloudinary");
 cloudinary.config({
-     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
     api_key: process.env.CLOUDINARY_API_KEY,
     api_secret: process.env.CLOUDINARY_API_SECRET
 });
 
-exports.uploads = (file: any) => {
+exports.uploads = file => {
     return new Promise(resolve => {
         cloudinary.uploader.upload(
             file,
-            (            result: { url: any; public_id: any; }) => {
+            result => {
                 resolve({ url: result.url, id: result.public_id });
             },
             { resource_type: "auto" }

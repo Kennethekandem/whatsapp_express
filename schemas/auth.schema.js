@@ -1,8 +1,6 @@
-'use strict'
+const joi = require('joi');
 
-let joi = require('joi');
-
-const Schema= {
+const Schema = {
     register: joi.object().keys({
         username: joi.string().required(),
         phone: joi.string().required(),

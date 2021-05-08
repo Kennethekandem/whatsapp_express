@@ -2,11 +2,11 @@
   "name": "whatsapp_express",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.ts",
-    "dev": "nodemon index.ts"
+    "start": "node index",
+    "dev": "nodemon index"
   },
   "repository": {
     "type": "git",
@@ -31,11 +31,6 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.12.7",
     "multer": "^1.4.2",
-    "nodemon": "^2.0.7",
-    "ts-node": "^9.1.1",
-    "typescript": "^4.2.4"
-  },
-  "devDependencies": {
-    "@types/node": "^15.0.2"
+    "nodemon": "^2.0.7"
   }
 }
