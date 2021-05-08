@@ -1,10 +1,7 @@
 let authMongoose = require('mongoose');
 
 let userSchema = authMongoose.Schema({
-    username: {
-        type: String,
-        required: true
-    },
+    username: String,
     phone: {
         type: String,
         required: true
