@@ -5,7 +5,17 @@ class contactService {
 
     static async all(id) {
 
-        return await contact.findOne(id);
+        return await contact.findOne({id});
+    }
+
+    static async add(data) {
+
+        const { user_id } = data;
+        const user = await contact.findOne({user_id});
+
+        if(user.length > 0) {
+            
+        }
     }
 }
 

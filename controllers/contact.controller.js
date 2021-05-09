@@ -3,6 +3,30 @@ const createError = require('http-errors');
 
 class contactController {
 
+    static all = async(req, res, next) => {
+
+        try {
+
+            let { id } = req.params;
+            let data = await contact.all(id);
+
+            if(data === null) {
+                res.status(204).json({
+                    status: false,
+                    message: 'No contacts found!'
+                })
+            }
+
+            res.status(200).json({
+                status: true,
+                message: 'contacts found',
+                data
+            })
+
+        } catch(error) {
+            next(createError(error.statusCode, error.message));
+        }
+    }
 }
 
 

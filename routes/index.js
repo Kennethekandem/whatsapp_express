@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
 });
 
 router.use('/auth', auth);
-router.use('/contact', contact);
+router.use('/contacts', contact);
 
 router.use( async (req, res, next) => {
     next(createError.NotFound('Route not Found'))
