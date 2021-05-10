@@ -10,12 +10,12 @@ class contactController {
             let { id } = req.params;
             let data = await contact.all(id);
 
-            if(data === null) {
-                res.status(204).json({
-                    status: false,
-                    message: 'No contacts found!'
-                })
-            }
+            // if(data === null) {
+            //     res.status(204).json({
+            //         status: false,
+            //         message: 'No contacts found!'
+            //     })
+            // }
 
             res.status(200).json({
                 status: true,
