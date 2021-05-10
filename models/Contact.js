@@ -18,10 +18,10 @@ const contactSchema = mongoose.Schema({
             type: String,
             required: true
         },
-        contact_image: {
-            type: String,
-            required: true
-        },
+        // contact_image: {
+        //     type: String,
+        //     required: true
+        // },
     }]
 });
 
